@@ -1,0 +1,122 @@
+/* CardSlider.module.css */
+.sliderContainer {
+    position: relative;
+    max-width: 1500px; /* Adjust as needed for your design */
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #fff; /* Assuming you want a white background for the whole container */
+  }
+  
+  .cardsWrapper {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card {
+    flex: 0 0 33.3333%; /* Each card takes one-third of the width */
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .imageContainer {
+    position: relative;
+    margin-top: -60px; /* Pull the image container up to overlap the blue background */
+    background-color: #007bff;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border: 5px solid white; /* Assuming you want a white border around the image */
+  }
+  
+  .image {
+    width: 100%;
+    height: auto; /* Adjust height automatically */
+    display: block; /* Remove any extra space under the image */
+  }
+  
+  .name {
+    font-size: 1.5rem; /* Adjust the font size as needed */
+    color: #333;
+    margin: 0.5rem 0;
+  }
+  
+  .description {
+    color: #666;
+    margin-bottom: 1rem;
+  }
+  
+  .viewMore {
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    color: #333;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+    border-radius: 50%; /* Rounded corners for arrows */
+  }
+  
+  .left {
+    left: 20px;
+  }
+  
+  .right {
+    right: 20px;
+  }
+  
+  .dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+  
+  .dot {
+    padding: 5px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .activeDot {
+    background-color: #007bff;
+  }
+  
+  /* Add responsive behavior */
+  @media (max-width: 768px) {
+    .card {
+      flex: 0 0 50%; /* Show two cards on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card {
+      flex: 0 0 100%; /* Show one card on very small screens */
+    }
+  
+    .arrow {
+      display: none; /* Hide arrows on very small screens */
+    }
+  }
+  
